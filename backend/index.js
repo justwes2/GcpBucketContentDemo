@@ -11,7 +11,7 @@ const storage = new Storage();
 
 const bucketName = 'coffay-storage'
 
-
+const addressRoot = "https://storage.cloud.google.com/"
 exports.showBucketContents = (req, res) => {
   const fileNames = []
   storage
@@ -24,7 +24,10 @@ exports.showBucketContents = (req, res) => {
     console.log('Files:');
     files.forEach(file => {
       console.log(file.name);
-      fileNames.push(file.name)
+      fileNames.push({
+        "file name" : file.name,
+        "link" : addressRoot+bucketName+"/"+file.name
+      })
     });
     res.send(fileNames)
   })
@@ -32,7 +35,3 @@ exports.showBucketContents = (req, res) => {
     console.error('ERROR:', err);
   });
 };
-
-
-
-// curl  https://us-central1-serverless-mvp.cloudfunctions.net/showBucketContents
