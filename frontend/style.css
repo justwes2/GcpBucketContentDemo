@@ -1,0 +1,27 @@
+h1 {
+  margin-left: 10vw;
+  margin-right: 10vw;
+}
+
+ul {
+  margin-top: 5vw;
+  margin-left: 10vw;
+  margin-right: 10vw;
+}
+
+li {
+  margin: 1vw;
+}
+
+#viewer {
+  height: 60vw;
+  width: 80vw;
+  background-color: grey;
+  margin-left: 10vw;
+  margin-right: 10vw;
+}
+
+#video {
+  height: inherit;
+  width: inherit;
+}
