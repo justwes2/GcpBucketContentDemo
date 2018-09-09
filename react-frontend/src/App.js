@@ -1,12 +1,17 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Player from './Player'
+import Header from './Header'
+import List from './List'
 
 class App extends Component {
   render() {
     return (
-      <Player />
+      <div>
+        <Header />
+        <Player />
+        <List />
+      </div>
     );
   }
 }

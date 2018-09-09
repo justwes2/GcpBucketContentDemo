@@ -1,19 +1,16 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 
 
 class Player extends Component {
+  constructor(props){
+    super()
+  }
   render() {
+    let url = 'https://00e9e64bac547d78b68a646958d11faddb90fcc65fda9fea34-apidata.googleusercontent.com/download/storage/v1/b/coffay-storage/o/Beach-14297.mp4'
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/Player.js</code> and save to reload.
-        </p>
-      </div>
+      <video id="video" width="320" height="240" controls>
+        <source src={url} type="video/mp4"/>
+      </video>
     );
   }
 }
